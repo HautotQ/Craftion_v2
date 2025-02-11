@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craftion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+            text-align: center;
+        }
+        button {
+            background: #0779e4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .question-list, .play-area {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Craftion</h1>
+    </header>
+
+    <div class="container">
+        
+        <section class="question-list">
+            <h2>Liste des Questions</h2>
+            <input type="text" id="searchBar" placeholder="Rechercher une question...">
+            <ul id="questions">
+                <li>Question 1</li>
+                <li>Question 2</li>
+                <li>Question 3</li>
+            </ul>
+            <button onclick="ajouterQuestion()">Ajouter une question</button>
+        </section>
+
+        <section class="play-area">
+            <h2>Jouer</h2>
+            <p id="currentQuestion">Question actuelle: </p>
+            <input type="text" id="userAnswer" placeholder="Votre réponse">
+            <button onclick="validerReponse()">Valider</button>
+            <p id="score">Score: 0</p>
+        </section>
+
+    </div>
+
+    <script>
+        function ajouterQuestion() {
+            alert("Ajout de question non implémenté.");
+        }
+
+        function validerReponse() {
+            let answer = document.getElementById("userAnswer").value;
+            if(answer.trim() !== "") {
+                alert("Réponse envoyée !");
+            } else {
+                alert("Veuillez entrer une réponse.");
+            }
+        }
+    </script>
+
+</body>
+</html>
